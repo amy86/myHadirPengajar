@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { QrcodePage } from './qrcode.page';
+import { SenaraiKehadiranPage } from './senarai-kehadiran.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: QrcodePage
+    component: SenaraiKehadiranPage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [QrcodePage]
+  declarations: [SenaraiKehadiranPage]
 })
-export class QrcodePageModule {}
+export class SenaraiKehadiranPageModule {}
