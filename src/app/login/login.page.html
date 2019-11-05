@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color = "primary">
+    <ion-title>Log Masuk Pengajar</ion-title>
+    <!-- <ion-button  color="light" (click)="dismissLogin()" slot="end" > -->
+      <ion-button slot="end" (click)="daftar()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- <form #form="ngForm" (ngSubmit)="login(form)" method="post"> -->
+<form>
+    <ion-item>
+      <ion-label position="floating">No Kad Pengenalan</ion-label>
+      <ion-input type="icno" name="icno" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Kata Laluan</ion-label>
+      <ion-input type="password" name="password" ngModel></ion-input>
+    </ion-item>
+
+    <ion-button color="primary"  expand="full" (click)="senaraisubjek()">
+      Log Masuk
+    </ion-button>
+  </form>
+</ion-content>
