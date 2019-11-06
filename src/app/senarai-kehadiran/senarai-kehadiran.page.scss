@@ -15,3 +15,15 @@
     --ion-color-shade: #e0ca00;
     --ion-color-tint: #fff01a;
   }
+
+  .orenheader{
+    background-color: #ff7300;
+  }
+
+  .line ion-row:nth-child(even) {
+    background: #e7b870;
+  }
+
+  .line ion-col{
+    border: 1px solid rgb(241, 238, 231);
+  }
