@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'senarai-kehadiran', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'senaraisubjek', loadChildren: './senaraisubjek/senaraisubjek.module#SenaraisubjekPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'daftar', loadChildren: './daftar/daftar.module#DaftarPageModule' },
   { path: 'qrcode', loadChildren: './qrcode/qrcode.module#QrcodePageModule' },
+  { path: 'senarai-kehadiran', loadChildren: './senarai-kehadiran/senarai-kehadiran.module#SenaraiKehadiranPageModule' },
 ];
 
 @NgModule({

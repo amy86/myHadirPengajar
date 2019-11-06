@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QrcodePage } from './qrcode.page';
+import { SenaraiKehadiranPage } from './senarai-kehadiran.page';
 
-describe('QrcodePage', () => {
-  let component: QrcodePage;
-  let fixture: ComponentFixture<QrcodePage>;
+describe('SenaraiKehadiranPage', () => {
+  let component: SenaraiKehadiranPage;
+  let fixture: ComponentFixture<SenaraiKehadiranPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QrcodePage ],
+      declarations: [ SenaraiKehadiranPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QrcodePage);
+    fixture = TestBed.createComponent(SenaraiKehadiranPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
