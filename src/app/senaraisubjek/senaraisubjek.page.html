@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar color = "primary">
+      
+        <ion-title>Senarai Subjek Pengajar</ion-title>
+        <!-- <ion-button  color="light" (click)="dismissLogin()" slot="end" > -->
+          <!-- <ion-button slot="end" (click)="home()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button> -->
+      </ion-toolbar>
+  </ion-header>
+
+<ion-content fullscreen>
+    <ion-item>
+        <ion-label class="ion-text-left">Institut :</ion-label>
+        <ion-select placeholder="Sila Pilih Institut">
+          <ion-select-option value="iljtm" class="ion-text-center" *ngFor="let institut of iljtm">{{institut.iljtm_name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- <ion-content fullscreen> -->
+          <ion-list>
+            
+    
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="data:image/png;base64,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">
+              </ion-avatar>
+              <ion-label (click)="nav()">
+                <h2>Diploma Teknologi Kejuruteraan Mekatronik</h2>
+                <h3>Semester 4</h3>
+                <p>INTRODUCTION TO CERAMIC MATERIALS</p>
+                <p>8.00am - 9.00am</p>
+              </ion-label>
+            </ion-item>
+    
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="data:image/png;base64,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">
+              </ion-avatar>
+              <ion-label>
+                <h2>Teknologi Penyelenggaraan Mekanikal</h2>
+                <h3>Semester 2</h3>
+                <p>TECHNICAL DRAWING</p>
+                <p>9.30am - 12.00pm</p>
+              </ion-label>
+            </ion-item>
+    
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="data:image/png;base64,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">
+              </ion-avatar>
+              <ion-label>
+                  <h2>Teknologi Penyelenggaraan Mekanikal</h2>
+                  <h3>Semester 2</h3>
+                  <p>TECHNICAL DRAWING</p>
+                  <p>9.30am - 12.00pm</p>
+              </ion-label>
+            </ion-item>
+    
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="data:image/png;base64,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">
+              </ion-avatar>
+              <ion-label >
+                  <h2>Teknologi Penyelenggaraan Mekanikal</h2>
+                  <h3>Semester 2</h3>
+                  <p>TECHNICAL DRAWING</p>
+                  <p>9.30am - 12.00pm</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        <!-- </ion-content> -->
+        <ion-list-header>
+            <ion-text color="dark"> Jadual Adalah Merujuk Kepada Sesi Pembelajaran Semasa.</ion-text>
+        </ion-list-header>
+
+</ion-content>
