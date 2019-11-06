@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EnvService {
-  API_URL = 'http://myhadir.test/iljtm/';
+  API_URL = 'http://myhadir.test/api/';
   constructor() { }
 }

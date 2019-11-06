@@ -21,9 +21,9 @@ iljtm: Iljtm[];
   getiljtm() {
     return this.http.get<Iljtm[]>(this.env.API_URL + 'iljtm')
     .pipe(
-      tap(iljtm => {
-        this.iljtm = iljtm;
-        return iljtm;
+      tap(data => {
+        this.iljtm = data;
+        return data;
       })
     );
   }

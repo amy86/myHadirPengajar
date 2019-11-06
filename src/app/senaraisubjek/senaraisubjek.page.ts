@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { EnvService } from '../services/env.service';
 import { tap } from 'rxjs/operators';
+import { ApirequestService } from '../services/apirequest.service';
 
 @Component({
   selector: 'app-senaraisubjek',
@@ -24,29 +25,31 @@ export class SenaraisubjekPage implements OnInit {
                private userService: UserService,
                private http: HttpClient,
                private storage: NativeStorage,
-               private env: EnvService) { }
+               private env: EnvService,
+               private apirequest: ApirequestService) { }
 
-    senaraisubjek() {
-        this.router.navigate(['senaraisubjek']);
-    }
-    daftar() {
-      this.router.navigate(['daftar']);
-    }
-    home() {
-      this.router.navigate(['home']);
-    }
+    // senaraisubjek() {
+    //     this.router.navigate(['senaraisubjek']);
+    // }
+    // daftar() {
+    //   this.router.navigate(['daftar']);
+    // }
+    // home() {
+    //   this.router.navigate(['home']);
+    // }
 
     nav() {
         this.router.navigate(['login']);
         }
 
         getiljtm() {
-          return this.http.get<Iljtm[]>(this.env.API_URL + 'iljtm')
-          .pipe(
-            tap(iljtm => {
+          this.apirequest.getiljtm().subscribe(
+            iljtm => {
               this.iljtm = iljtm;
-              return iljtm;
-            })
+            },
+            error => {
+              console.log(error);
+            }
           );
         }
 }
